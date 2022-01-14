@@ -79,7 +79,6 @@ def load_user(user_id):
 @app.route('/')
 def get_all_posts():
     posts = BlogPost.query.all()
-    print(posts)
     return render_template("index.html", all_posts=posts)
 
 
@@ -141,6 +140,7 @@ def show_post(post_id):
 
     return render_template("post.html", post=requested_post, form=comment_form, gravater=gravater)
 
+hey = 2
 
 @app.route("/about")
 def about():
